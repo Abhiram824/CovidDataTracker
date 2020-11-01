@@ -1,0 +1,28 @@
+
+<header>
+    <h1>Daily Coved Data</h1>
+</header>
+
+<ul *ngIf="covidData">
+   <tr>
+            <th>Date</th>
+                <th>States</th>
+                    <th>Positive</th>
+                    <th>Negative</th>
+                    <th>Pending</th>
+                    <th>Hospitalized Currently</th>
+                    <th>Hospitalized Cumulative</th>
+                     <th>OnVentilator Currently</th>
+        </tr>
+
+   <tr *ngFor="let data of covidData">
+            <td>{{data.date}}</td>
+                <td>{{data.states}}</td>
+                    <td>{{data.positive}}</td>
+                     <td>{{data.negative}}</td>
+                      <td>{{data.pending}}</td>
+                       <td>{{data.hospitalizedCurrently}}</td>
+                       <td>{{data.hospitalizedCumulative}}</td>
+                       <td>{{data.onVentilatorCurrently}}</td>
+        </tr>
+</ul>
